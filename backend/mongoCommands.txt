@@ -1,0 +1,878 @@
+//Movies data are given in this file open theatreData.txt file for theatre data
+
+//In mongoshell application type the following commands
+
+
+1. show dbs 
+2. use Multiplex
+3. show collections
+
+//now copy the whole data and paste in mongo shell
+
+db.movies.insertMany(
+[
+{
+    "movieId":"MOVIE101",
+    "name":"Sardar",
+    "genre":"Action/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sardar-et00310546-1665572029.jpg",
+    "language":"Tamil",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Karthi","Raashi Khanna"],
+    "audi_ids":["AUDI101","AUDI102"],
+    "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE102",
+    "name":"PS -1",
+    "genre":"Action/Drama/Thriller/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ponniyin-selvan--part-1-et00323897-1664271205.jpg",
+    "language":"Tamil",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Vikram","Karthi","Aishwarya","Trisha"],
+    "audi_ids":["AUDI103","AUDI104"],
+    "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE103",
+    "name":"Prince",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/prince-et00331045-1665383332.jpg",
+    "language":"Tamil",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Sivakarthikeyan","Maria Ryaboshapka"],
+    "audi_ids":["AUDI105","AUDI106"],
+    "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE104",
+    "name":"Kantara",
+    "genre":"Adventure/Drama/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kantara-et00330541-1664620755.jpg",
+    "language":"Tamil",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Rishab Shetty","Kishor"],
+    "audi_ids":["AUDI107","AUDI108"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE105",
+    "name":"Kaalangalil Aval Vasantham",
+    "genre":"Comedy/Romantic",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kazhangalil-aval-vasantham-et00340205-1663311128.jpg",
+    "language":"Tamil",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Kaushik Ram","Anjali Nair","Heroshini Komali R"],
+    "audi_ids":["AUDI109","AUDI110"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE106",
+    "name":"Ram Setu",
+    "genre":"Action/Adventure/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ram-setu-et00300917-1665129549.jpg",
+    "language":"Tamil",
+    
+    "duration":140,
+    "rating":4,
+    "actors":["Akshay Kumar","Jacqueline Fernandez","Satya Dev"],
+    "audi_ids":["AUDI111","AUDI112"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE107",
+    "name":"Thank God",
+    "genre":"Comedy/Drama/Fantasy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thank-god-et00318167-1665398727.jpg",
+    "language":"Hindi",
+    
+    "duration":120,
+    "rating":3,
+    "actors":["Ajay Devgn","Sidharth Malhotra","Rakul Preet Singh"],
+    "audi_ids":["AUDI113","AUDI114"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE108",
+    "name":"GG - Gandhada Gudi",
+    "genre":"Adventure/Family/Musical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/gandhada-gudi-et00334393-1666250939.jpg",
+    "language":"Kannada",
+    
+    "duration":97,
+    "rating":3,
+    "actors":["Puneeth Rajkumar","Amoghavarsha"],
+    "audi_ids":["AUDI115","AUDI116"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE109",
+    "name":"Har Har Mahadev",
+    "genre":"Action/Drama/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/har-har-mahadev-et00339748-1665642608.jpg",
+    "language":"Tamil",
+    
+    "duration":162,
+    "rating":4,
+    "actors":["Sharad Kelkar","Subodh Bhave","Amruta Khanvilkar"],
+    "audi_ids":["AUDI117","AUDI118"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE110",
+    "name":"DoctorG",
+    "genre":"Comedy/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/doctor-g-et00305720-1663573294.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":3,
+    "actors":["Ayushmann Kuran","Rakul Preet Singh"],
+    "audi_ids":["AUDI119","AUDI120"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE111",
+    "name":"Naane Varuven",
+    "genre":"Action/Psychological/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/naane-varuven-et00304895-08-12-2021-12-11-08.jpg",
+    "language":"Tamil",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Dhanush","Elli AvrRam","Yogi Babu"],
+    "audi_ids":["AUDI121","AUDI122"],
+     "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE112",
+    "name":"Vinnaithaandi Varuvaayaa",
+    "genre":"Drama/Romantic",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/vinnaithaandi-varuvaayaa-et00038721-06-11-2020-11-54-16.jpg",
+    "language":"Tamil",
+    
+    "duration":160,
+    "rating":4,
+    "actors":["Silambarasan","Thrisa"],
+    "audi_ids":["AUDI123","AUDI124"],
+    "movieLocation" :"Chennai"
+},
+{
+    "movieId":"MOVIE113",
+    "name":"Kantara",
+    "genre":"Adventure/Drama/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kantara-et00330541-1664620755.jpg",
+    "language":"Kannada",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Rishab Shetty","Kishor"],
+    "audi_ids":["AUDI125","AUDI126"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE114",
+    "name":"GG - Gandhada Gudi",
+    "genre":"Adventure/Family/Musical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/gandhada-gudi-et00334393-1666250939.jpg",
+    "language":"Kannada",
+    
+    "duration":97,
+    "rating":3,
+    "actors":["Puneeth Rajkumar","Amoghavarsha"],
+    "audi_ids":["AUDI127","AUDI128"],
+      "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE115",
+    "name":"Head Bush",
+    "genre":"Biography/Crime/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/head-bush-et00331115-1665124062.jpg",
+    "language":"Kannada",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Dhananjay","Payal Rajput"],
+    "audi_ids":["AUDI129","AUDI130"],
+      "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE116",
+    "name":"Sardar",
+    "genre":"Action/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sardar-et00310546-1665572029.jpg",
+    "language":"Tamil",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Karthi","Raashi Khanna"],
+    "audi_ids":["AUDI131","AUDI132"],
+    "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE117",
+    "name":"PS -1",
+    "genre":"Action/Drama/Thriller/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ponniyin-selvan--part-1-et00323897-1664271205.jpg",
+    "language":"Tamil",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Vikram","Karthi","Aishwarya","Trisha"],
+    "audi_ids":["AUDI133","AUDI134"],
+    "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE118",
+    "name":"Doctor G",
+    "genre":"Comedy/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/doctor-g-et00305720-1663573294.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":3,
+    "actors":["Ayushmann Kuran","Rakul Preet Singh"],
+    "audi_ids":["AUDI135","AUDI136"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE119",
+    "name":"Prince",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/prince-et00331045-1665383332.jpg",
+    "language":"Telugu",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Sivakarthikeyan","Maria Ryaboshapka"],
+    "audi_ids":["AUDI137","AUDI138"],
+    "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE120",
+    "name":"Champion",
+    "genre":"Action/Drama/Sports",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/champion-et00326583-1665574855.jpg",
+    "language":"Kannada",
+    
+    "duration":125,
+    "rating":4,
+    "actors":["Sachin Dhanpal","Aditi Prabhudeva"],
+    "audi_ids":["AUDI139","AUDI140"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE121",
+    "name":"Padavettu",
+    "genre":"Action/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/padavettu-et00341828-1665124878.jpg",
+    "language":"Malayalam",
+    
+    "duration":145,
+    "rating":4,
+    "actors":["Nivin Pauly","Aditi Balan"],
+    "audi_ids":["AUDI141","AUDI142"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE122",
+    "name":"Ori Devuda",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ori-devuda-et00340128-1665746048.jpg",
+    "language":"Telugu",
+    
+    "duration":145,
+    "rating":4,
+    "actors":["Daggubati Venkatesh","Vishwak Sen","Mithila Palkar"],
+    "audi_ids":["AUDI143","AUDI144"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE123",
+    "name":"Har Har Mahadev",
+    "genre":"Action/Drama/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/har-har-mahadev-et00339748-1665642608.jpg",
+    "language":"Kannada",
+    
+    "duration":162,
+    "rating":4,
+    "actors":["Sharad Kelkar","Subodh Bhave","Amruta Khanvilkar"],
+    "audi_ids":["AUDI145","AUDI146"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE124",
+    "name":"Guru Shishyaru",
+    "genre":"Drama/Sports",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/guru-shishyaru-et00339424-1662548063.jpg",
+    "language":"Kannada",
+    
+    "duration":163,
+    "rating":4,
+    "actors":["Sharan","Nishvika Naidu","Suresh Heblikar"],
+    "audi_ids":["AUDI147","AUDI148"],
+     "movieLocation" :"Bangalore"
+},
+{
+    "movieId":"MOVIE125",
+    "name":"Kantara",
+    "genre":"Adventure/Drama/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kantara-telugu-et00342026-1665647359.jpg",
+    "language":"Telugu",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Rishab Shetty","Kishor"],
+    "audi_ids":["AUDI149","AUDI150"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE126",
+    "name":"Sardar",
+    "genre":"Action/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sardar-et00310546-1665572029.jpg",
+    "language":"Telugu",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Karthi","Raashi Khanna"],
+    "audi_ids":["AUDI151","AUDI152"],
+    "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE127",
+    "name":"Ram Setu",
+    "genre":"Action/Adventure/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ram-setu-et00300917-1665129549.jpg",
+    "language":"Telugu",
+    
+    "duration":140,
+    "rating":4,
+    "actors":["Akshay Kumar","Jacqueline Fernandez","Satya Dev"],
+    "audi_ids":["AUDI153","AUDI154"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE128",
+    "name":"Ori Devuda",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ori-devuda-et00340128-1665746048.jpg",
+    "language":"Telugu",
+    
+    "duration":145,
+    "rating":4,
+    "actors":["Daggubati Venkatesh","Vishwak Sen","Mithila Palkar"],
+    "audi_ids":["AUDI155","AUDI156"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE129",
+    "name":"Anukoni Prayanam",
+    "genre":"Drama/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/anukoni-prayanam-et00342689-1666862566.jpg",
+    "language":"Telugu",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Rajendra Prasad","Narasimha Raju","Tulasi Shivamani"],
+    "audi_ids":["AUDI157","AUDI158"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE130",
+    "name":"Prince",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/prince-et00331045-1665383332.jpg",
+    "language":"Telugu",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Sivakarthikeyan","Maria Ryaboshapka"],
+    "audi_ids":["AUDI159","AUDI160"],
+    "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE131",
+    "name":"Rudraveena",
+    "genre":"Romantic/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/rudraveena-et00339248-1664192632.jpg",
+    "language":"Telugu",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Shreeram Nimmala","Elsa Ghosh"],
+    "audi_ids":["AUDI161","AUDI162"],
+    "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE132",
+    "name":"Doctor G",
+    "genre":"Comedy/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/doctor-g-et00305720-1663573294.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":3,
+    "actors":["Ayushmann Kuran","Rakul Preet Singh"],
+    "audi_ids":["AUDI163","AUDI164"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE133",
+    "name":"Identity",
+    "genre":"Psychological/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/identity-et00338696-1662617311.jpg",
+    "language":"Telugu",
+    
+    "duration":130,
+    "rating":3,
+    "actors":["Bhagyalakshmi Rathore","Amaresh Raju"],
+    "audi_ids":["AUDI165","AUDI166"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE134",
+    "name":"Har Har Mahadev",
+    "genre":"Action/Drama/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/har-har-mahadev-et00339748-1665642608.jpg",
+    "language":"Telugu",
+    
+    "duration":162,
+    "rating":4,
+    "actors":["Sharad Kelkar","Subodh Bhave","Amruta Khanvilkar"],
+    "audi_ids":["AUDI167","AUDI168"],
+     "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE135",
+    "name":"God Father",
+    "genre":"Adventure/Drama/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/godfather-et00325579-1664779116.jpg",
+    "language":"Telugu",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Chiranjeevi","Nayanthara"],
+    "audi_ids":["AUDI169","AUDI170"],
+    "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE136",
+    "name":"Focus",
+    "genre":"Suspense/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/focus-et00325559-30-03-2022-09-46-29.jpg",
+    "language":"Telugu",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Suhasini Maniratnam","Vijay Shankar"],
+    "audi_ids":["AUDI171","AUDI172"],
+    "movieLocation" :"Hyderabad"
+},
+{
+    "movieId":"MOVIE137",
+    "name":"Ram Setu",
+    "genre":"Action/Adventure/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ram-setu-et00300917-1665129549.jpg",
+    "language":"Hindi",
+    
+    "duration":140,
+    "rating":4,
+    "actors":["Akshay Kumar","Jacqueline Fernandez","Satya Dev"],
+    "audi_ids":["AUDI173","AUDI174"],
+     "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE138",
+    "name":"Thank God",
+    "genre":"Comedy/Drama/Fantasy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thank-god-et00318167-1665398727.jpg",
+    "language":"Hindi",
+    
+    "duration":120,
+    "rating":3,
+    "actors":["Ajay Devgn","Sidharth Malhotra","Rakul Preet Singh"],
+    "audi_ids":["AUDI175","AUDI176"],
+     "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE139",
+    "name":"Kantara",
+    "genre":"Adventure/Drama/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kantara-et00330541-1664620755.jpg",
+    "language":"Hindi",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Rishab Shetty","Kishor"],
+    "audi_ids":["AUDI177","AUDI178"],
+     "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE140",
+    "name":"Har Har Mahadev",
+    "genre":"Action/Drama/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/har-har-mahadev-et00339748-1665642608.jpg",
+    "language":"Hindi",
+    
+    "duration":162,
+    "rating":4,
+    "actors":["Sharad Kelkar","Subodh Bhave","Amruta Khanvilkar"],
+    "audi_ids":["AUDI179","AUDI180"],
+     "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE141",
+    "name":"Drishyam 2",
+    "genre":"Mystery/Drama/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/drishyam-2-et00331997-1664439649.jpg",
+    "language":"Hindi",
+    
+    "duration":140,
+    "rating":4,
+    "actors":["Ajay Devgn","Tabu","Shriya Saran"],
+    "audi_ids":["AUDI181","AUDI182"],
+     "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE142",
+    "name":"Doctor G",
+    "genre":"Comedy/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/doctor-g-et00305720-1663573294.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":3,
+    "actors":["Ayushmann Kuran","Rakul Preet Singh"],
+    "audi_ids":["AUDI183","AUDI184"],
+     "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE143",
+    "name":"Sardar",
+    "genre":"Action/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sardar-et00310546-1665572029.jpg",
+    "language":"Telugu",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Karthi","Raashi Khanna"],
+    "audi_ids":["AUDI185","AUDI186"],
+    "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE144",
+    "name":"PS -1",
+    "genre":"Action/Drama/Thriller/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ponniyin-selvan--part-1-et00323897-1664271205.jpg",
+    "language":"Hindi",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Vikram","Karthi","Aishwarya","Trisha"],
+    "audi_ids":["AUDI187","AUDI188"],
+    "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE145",
+    "name":"Vikram Vedha",
+    "genre":"Action/Comedy/Drama/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/vikram-vedha-et00319143-1663323973.jpg",
+    "language":"Hindi",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Saif Ali Khan","Hrithik Roshan"],
+    "audi_ids":["AUDI189","AUDI190"],
+    "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE146",
+    "name":"Prince",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/prince-et00331045-1665383332.jpg",
+    "language":"Telugu",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Sivakarthikeyan","Maria Ryaboshapka"],
+    "audi_ids":["AUDI191","AUDI192"],
+    "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE147",
+    "name":"Tara vs Bilal",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/tara-vs-bilal-et00329391-1664195884.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Harshvardhan Rane","Sonia Rathee"],
+    "audi_ids":["AUDI193","AUDI194"],
+    "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE148",
+    "name":"GG - Gandhada Gudi",
+    "genre":"Adventure/Family/Musical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/gandhada-gudi-et00334393-1666250939.jpg",
+    "language":"Kannada",
+    
+    "duration":97,
+    "rating":3,
+    "actors":["Puneeth Rajkumar","Amoghavarsha"],
+    "audi_ids":["AUDI195","AUDI196"],
+      "movieLocation" :"Mumbai"
+},
+{
+    "movieId":"MOVIE149",
+    "name":"Ram Setu",
+    "genre":"Action/Adventure/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ram-setu-et00300917-1665129549.jpg",
+    "language":"Hindi",
+    
+    "duration":140,
+    "rating":4,
+    "actors":["Akshay Kumar","Jacqueline Fernandez","Satya Dev"],
+    "audi_ids":["AUDI197","AUDI198"],
+     "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE150",
+    "name":"Thank God",
+    "genre":"Comedy/Drama/Fantasy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thank-god-et00318167-1665398727.jpg",
+    "language":"Hindi",
+    
+    "duration":120,
+    "rating":3,
+    "actors":["Ajay Devgn","Sidharth Malhotra","Rakul Preet Singh"],
+    "audi_ids":["AUDI199","AUDI200"],
+     "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE151",
+    "name":"Kantara",
+    "genre":"Adventure/Drama/thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kantara-et00330541-1664620755.jpg",
+    "language":"Hindi",
+    
+    "duration":120,
+    "rating":4,
+    "actors":["Rishab Shetty","Kishor"],
+    "audi_ids":["AUDI201","AUDI202"],
+     "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE152",
+    "name":"Har Har Mahadev",
+    "genre":"Action/Drama/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/har-har-mahadev-et00339748-1665642608.jpg",
+    "language":"Hindi",
+    
+    "duration":162,
+    "rating":4,
+    "actors":["Sharad Kelkar","Subodh Bhave","Amruta Khanvilkar"],
+    "audi_ids":["AUDI203","AUDI204"],
+     "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE153",
+    "name":"Drishyam 2",
+    "genre":"Mystery/Drama/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/drishyam-2-et00331997-1664439649.jpg",
+    "language":"Hindi",
+    
+    "duration":140,
+    "rating":4,
+    "actors":["Ajay Devgn","Tabu","Shriya Saran"],
+    "audi_ids":["AUDI205","AUDI206"],
+     "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE154",
+    "name":"Doctor G",
+    "genre":"Comedy/Drama",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/doctor-g-et00305720-1663573294.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":3,
+    "actors":["Ayushmann Kuran","Rakul Preet Singh"],
+    "audi_ids":["AUDI207","AUDI208"],
+     "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE155",
+    "name":"Sardar",
+    "genre":"Action/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sardar-et00310546-1665572029.jpg",
+    "language":"Telugu",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Karthi","Raashi Khanna"],
+    "audi_ids":["AUDI209","AUDI210"],
+    "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE156",
+    "name":"PS -1",
+    "genre":"Action/Drama/Thriller/Historical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ponniyin-selvan--part-1-et00323897-1664271205.jpg",
+    "language":"Hindi",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Vikram","Karthi","Aishwarya","Trisha"],
+    "audi_ids":["AUDI211","AUDI212"],
+    "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE157",
+    "name":"Vikram Vedha",
+    "genre":"Action/Comedy/Drama/Thriller",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/vikram-vedha-et00319143-1663323973.jpg",
+    "language":"Hindi",
+    
+    "duration":150,
+    "rating":4,
+    "actors":["Saif Ali Khan","Hrithik Roshan"],
+    "audi_ids":["AUDI213","AUDI214"],
+    "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE158",
+    "name":"Prince",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/prince-et00331045-1665383332.jpg",
+    "language":"Telugu",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Sivakarthikeyan","Maria Ryaboshapka"],
+    "audi_ids":["AUDI215","AUDI216"],
+    "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE159",
+    "name":"Tara vs Bilal",
+    "genre":"Romantic/Comedy",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/tara-vs-bilal-et00329391-1664195884.jpg",
+    "language":"Hindi",
+    
+    "duration":130,
+    "rating":4,
+    "actors":["Harshvardhan Rane","Sonia Rathee"],
+    "audi_ids":["AUDI1217","AUDI218"],
+    "movieLocation" :"Delhi"
+},
+{
+    "movieId":"MOVIE160",
+    "name":"GG - Gandhada Gudi",
+    "genre":"Adventure/Family/Musical",
+
+    "image_url":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/gandhada-gudi-et00334393-1666250939.jpg",
+    "language":"Kannada",
+    
+    "duration":97,
+    "rating":3,
+    "actors":["Puneeth Rajkumar","Amoghavarsha"],
+    "audi_ids":["AUDI219","AUDI220"],
+      "movieLocation" :"Delhi"
+}
+]
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
