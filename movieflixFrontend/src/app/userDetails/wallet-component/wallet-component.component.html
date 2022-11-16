@@ -1,0 +1,265 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+
+<nav class="navbar navbar-expand-sm navbar-light fixed-top bg-dark">
+    <a class="navbar-brand" routerLink="/home/homepage"><img
+            src="https://www.solu.co/wp-content/uploads/2022/09/Moviesflix-1024x576-1.webp" width="100" alt=""></a>
+    <form class="d-flex me-5">
+        <input class="form-control me -5 mr-sm-2" type="text" id="moviename" name="moviename"
+            placeholder="Search for movies" #moviename>
+        <button class="xy bg-white me-5 rounded-" (click)="search(moviename.value)"><img
+                src="https://www.nicepng.com/png/detail/853-8539483_png-file-search-button-icon-png.png" alt=""
+                width="20">
+        </button>
+    </form>
+
+    <a class="nav-link text-light" routerLink="/home/homepage">Movies <span class="sr-only">(current)</span></a>
+    <a class="nav-link text-light">{{this.loc}} <span class="sr-only">(current)</span></a>
+
+
+    <div class="dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {{this.user.userId}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="triggerId">
+            <a class="dropdown-item" routerLink="/home/viewuser">View User</a>
+            <a class="dropdown-item " routerLink="/home/edituser">Edit User</a>
+            <a class="dropdown-item" routerLink="/home/wallet">Wallet</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="logout()">Log Out</a>
+
+        </div>
+    </div>
+
+    <img src="https://tse2.mm.bing.net/th?id=OIP.odaf7cByFm01EzzkUtL1GQHaHa&pid=Api&P=0" width="50"
+        routerLink="/home/viewuser"
+        class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} mx-3" alt="">
+</nav>
+
+
+
+<div class="top_space bg-light">
+
+
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-6"> Add Money </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card ">
+                    <div class="card-header">
+                        <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+
+                            <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                <li class="nav-item"> <a data-toggle="pill" class="nav-link active "> <i
+                                            class="fas fa-credit-card mr-2"></i> Credit / Debit Card </a> </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div id="credit-card" class="tab-pane fade show active pt-3">
+                                <form novalidate [formGroup]="walletForm" role="form" onsubmit="event.preventDefault()">
+                                    <div class="form-group"> <label for="username">
+                                            <h6>Card Owner</h6>
+                                        </label> <input type="text" name="username" placeholder="Card Owner Name"
+                                            required formControlName="username" class="form-control "
+                                            [ngClass]="{ 'is-invalid':username.errors && (username.touched || username.dirty),'is-valid' :username.valid}">
+                                        <div class="invalid-feedback">
+                                            <strong *ngIf="username.errors?.['required']">Name is required </strong>
+                                            <strong *ngIf="username.errors?.['minlength']">Name must be greater than 3
+                                                character</strong>
+                                            <strong *ngIf="username.errors?.['pattern']">Name Should not have numbers or
+                                                special characters</strong>
+                                                <strong *ngIf="username.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group"> <label for="cardNumber">
+                                            <h6>Card number</h6>
+                                        </label>
+                                        <div class="input-group"> <input type="text" name="cardNumber"
+                                                placeholder="Valid card number" class="form-control " required
+                                                formControlName="cardNumber"
+                                                [ngClass]="{ 'is-invalid':cardNumber.errors && (cardNumber.touched || cardNumber.dirty),'is-valid' :cardNumber.valid}">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text text-muted">
+                                                    <i class="fab fa-cc-visa mx-1"></i>
+                                                    <i class="fab fa-cc-mastercard mx-1"></i>
+                                                    <i class="fab fa-cc-amex mx-1"></i>
+                                                </span>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                <strong *ngIf="cardNumber.errors?.['required']">Card Number is required
+                                                </strong>
+                                                <strong *ngIf="cardNumber.errors?.['pattern']">Enter a valid Card Number
+                                                </strong>
+                                                <strong *ngIf="cardNumber.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="form-group"> <label><span class="hidden-xs">
+                                                        <h6>Expiration Date</h6>
+                                                    </span></label>
+                                                <select class="form-control" name="cc_exp_mo" size="0">
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group"> <label>
+                                                    <span class="hidden-xs">
+                                                        <h6>Year</h6>
+                                                    </span></label>
+
+                                                <select class="form-control" name="cc_exp_yr" size="0">
+                                                    <option>2022</option>
+                                                    <option>2023</option>
+                                                    <option>2024</option>
+                                                    <option>2025</option>
+                                                    <option>2026</option>
+                                                    <option>2027</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                                    title="Three digit CV code on the back of your card">
+                                                    <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label> <input type="text" required class="form-control"
+                                                    formControlName="cvvNumber"
+                                                    [ngClass]="{ 'is-invalid':cvvNumber.errors && (cvvNumber.touched || cvvNumber.dirty),'is-valid' :cvvNumber.valid}">
+                                                <div class="invalid-feedback">
+                                                    <strong *ngIf="cvvNumber.errors?.['required']">CVV Number is
+                                                        required </strong>
+                                                    <strong *ngIf="cvvNumber.errors?.['pattern']">Enter a valid CVV
+                                                        Number </strong>
+                                                        <strong *ngIf="cvvNumber.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group"> <label><span class="hidden-xs">
+                                                        <h6>Enter Amount</h6>
+                                                    </span></label>
+                                                <div class="input-group"> <input type="number"
+                                                        placeholder="Enter an amount" name="" class="form-control"
+                                                        required formControlName="amount"
+                                                        [ngClass]="{ 'is-invalid':amount.errors && (amount.touched || amount.dirty),'is-valid' :amount.valid}">
+                                                    <div class="invalid-feedback">
+                                                        <strong *ngIf="amount.errors?.['required']">Enter an amount
+                                                        </strong>
+                                                        <strong *ngIf="amount.errors?.['pattern']">Enter an Valid amount
+                                                        </strong>
+                                                        <strong *ngIf="amount.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                                    title="Enter Amount in Rupess">
+                                                    <h6>Rupees<i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label> <input type="text" placeholder=".00" required
+                                                    class="form-control" disabled> </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"> <button type="button" (click)="editUser()" [disabled]="walletForm.invalid"
+                                            class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-4 text-light" style="background-color: rgb(51, 51, 56);">
+        <ul class="nav justify-content-center  pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Company, Inc</p>
+        <div class="page-content page-container  mx-auto" id="page-content">
+            <div class="padding">
+                <div class="row container d-flex justify-content-center mx-auto">
+
+                    <div class="col-md-6 grid-margin stretch-card mx-auto ">
+                        <div class="mx-auto card-footer">
+                            <div class="mx-auto">
+                                <div class="template-demo">
+                                    <button type="button" onclick="window.location.href='https://www.facebook.com/'"
+                                        class="btn btn-social-icon btn-outline-facebook"><i class="fa fa-facebook"><img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/40px-Facebook_icon_2013.svg.png"
+                                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                style="border-radius: 30%;height :40px ;width:40px" alt="">
+                                        </i></button>
+                                    <button type="button" onclick="window.location.href='https://www.youtube.com/'"
+                                        class="btn btn-social-icon btn-outline-youtube"><i class="fa fa-youtube">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Logo_youtube_ios_%28cropped%29.jpg"
+                                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                style="border-radius: 30%;height :40px ;width:40px" alt="">
+                                        </i></button>
+                                    <button type="button" onclick="window.location.href='https://www.twitter.com/'"
+                                        class="btn btn-social-icon btn-outline-twitter"><i class="fa fa-twitter">
+                                            <img src="https://play-lh.googleusercontent.com/wIf3HtczQDjHzHuu7vezhqNs0zXAG85F7VmP7nhsTxO3OHegrVXlqIh_DWBYi86FTIGk"
+                                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                style="border-radius: 30%;height :40px ;width:40px" alt="">
+                                        </i></button>
+                                    <button type="button" onclick="window.location.href='https://www.instagram.com/'"
+                                        class="btn btn-social-icon btn-outline-instagram"><i class="fa fa-instagram">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+                                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                style="border-radius: 30%;height :40px; width:40px" alt="">
+                                        </i></button>
+                                    <button type="button" onclick="window.location.href='https://www.whatsapp.com/'"
+                                        class="btn btn-social-icon btn-outline-whatsapp"><i class="fa fa-whatsapp">
+                                            <img src="https://pbs.twimg.com/profile_images/1318652224638124032/wrpp2Nl4_400x400.png"
+                                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                style="border-radius: 30%;height :40px; width:40px auto" alt="">
+
+                                        </i></button>
+                                    <button type="button" onclick="window.location.href='https://www.pinterest.com/'"
+                                        class="btn btn-social-icon btn-outline-pintrest"><i class="fa fa-pintrest">
+                                            <img src="https://i.pinimg.com/originals/83/50/7a/83507a4a1f228afcc65407488ee1b7a6.png"
+                                                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                style="border-radius: 30%;height :40px; width:40px" alt=""></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->

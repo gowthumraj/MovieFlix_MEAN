@@ -1,0 +1,173 @@
+nav form
+{
+    width: 800px;
+}
+.top_space{
+  margin-top: 90px;
+}
+  .navbar-brand{
+   padding-top: 13px;
+    padding-left: 15px;
+    margin-left: 50px;
+    
+  }
+  .nav-right{
+    float: right;
+  }
+  .ab{
+    background-color:rgb(32, 27, 57);
+  }
+.navbar1{
+background-color: rgb(51,53,69) !important
+}
+
+.xy{
+margin-right: 150px !important;
+}
+.x{
+margin-left: 100px;
+margin-right: 0px !important;
+}
+.abc{
+margin-left: 5px;
+}
+.card{
+border: 0px;
+}
+.s{
+background-color:rgb(43, 49, 72) ;
+color: white;
+}
+.font{
+font-size: larger;
+}
+  
+.stretch-card>.card {
+  width: 100%;
+  min-width: 100%
+}
+
+body {
+  background-color: #f9f9fa
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+
+@media (max-width:991.98px) {
+  .padding {
+      padding: 1.5rem
+  }
+}
+
+@media (max-width:767.98px) {
+  .padding {
+      padding: 1rem
+  }
+}
+
+.padding {
+  padding: 2rem
+}
+
+.card {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+ }
+
+.card-footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  word-wrap: break-word;
+  
+ 
+  
+}
+.btn.btn-social-icon{
+ width: 50px;
+ height: 50px;
+ padding: 0;
+}
+.template-demo > .btn{
+ margin-right: 1rem !important;
+}
+
+.template-demo{
+ margin-top: 1rem !important;
+}
+
+
+
+
+.btn-outline-facebook {
+ border: 1px solid #3b579d;
+ color: #3b579d;
+}
+
+.btn-outline-facebook:hover {
+ background: #3b579d;
+ color: #ffffff;
+}
+
+.btn-outline-youtube {
+ border: 1px solid #e52d27;
+ color: #e52d27;
+}
+
+.btn-outline-twitter {
+ border: 1px solid #2caae1;
+ color: #2caae1;
+}
+
+.btn-outline-pintrest {
+ border: 1px solid #E60023;
+ color: #E60023;
+}
+
+.btn-outline-whatsapp {
+ border: 1px solid #25D366;
+ color: #25D366;
+}
+
+.btn-outline-instagram {
+ border: 1px solid #dc4a38;
+ color: #dc4a38;
+}
+
+.btn-outline-twitter:hover {
+ background: #2caae1;
+ color: #ffffff;
+}
+
+.btn-outline-whatsapp:hover {
+ background: #25D366;
+ color: #25D366;
+}
+
+.btn-outline-youtube:hover {
+ background: #e52d27;
+ color: #ffffff;
+}
+
+.btn-outline-instagram:hover{
+ background: #cd486b;
+ color: #cd486b;
+}
+
+.btn-outline-pintrest:hover{
+  background: #E60023;
+  color: #E60023;
+ }
+ 

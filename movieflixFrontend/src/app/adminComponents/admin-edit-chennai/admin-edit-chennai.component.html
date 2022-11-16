@@ -1,0 +1,77 @@
+<div class="form-bg">
+    <div class="container3">
+
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" *ngIf="formSubmitted">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <strong>Movie Edited successfully.....</strong>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-lg-6 col-md-7 offset-lg-3 offset-md-3">
+                <form novalidate [formGroup]="editMovForm" class="form-horizontal">
+                    <div class="header">Edit Movie</div>
+                    <div class="form-content">
+                        
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="name">Name </label>
+                                <input type="text" name="name" class="form-control" formControlName="name"
+                                    [ngClass]="{ 'is-invalid':name.errors && (name.touched || name.dirty),'is-valid' :name.valid}">
+                                <div class="invalid-feedback">
+                                    <strong *ngIf="name.errors?.['required']">Name is required </strong>
+                                    <strong *ngIf="name.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="genre">Genre</label>
+                                <input type="text" name="genre" class="form-control" formControlName="genre"
+                                    [ngClass]="{ 'is-invalid':genre.errors && (genre.touched || genre.dirty),'is-valid' :genre.valid}">
+                                <div class="invalid-feedback">
+                                    <strong *ngIf="genre.errors?.['required']">Genre is required </strong>
+                                    <strong *ngIf="genre.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="image_url">Image URL</label>
+                                <input type="text" name="image_url" class="form-control" formControlName="image_url"
+                                    [ngClass]="{ 'is-invalid':image_url.errors && (image_url.touched || image_url.dirty),'is-valid' :image_url.valid}">
+                                <div class="invalid-feedback">
+                                    <strong *ngIf="image_url.errors?.['required']">Image URL is required </strong>
+                                    <strong *ngIf="image_url.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label for="language">Language </label>
+                                <input type="text" name="language" class="form-control" formControlName="language"
+                                    [ngClass]="{ 'is-invalid':language.errors && (language.touched || language.dirty),'is-valid' :language.valid}">
+                                <div class="invalid-feedback">
+                                    <strong *ngIf="language.errors?.['required']">Language is required </strong>
+                                    <strong *ngIf="language.errors?.['pattern']">Enter a valid Language </strong>
+                                    <strong *ngIf="language.errors?.['whitespace']">Please enter valid data spaces alone is not accepted</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+
+                            <button type='submit' [disabled]="editMovForm.invalid"  (click)="editMovie()"
+                                class="btn btn-primary">Submit</button>
+                            <button type="button" (click)="editMovForm.reset()" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>

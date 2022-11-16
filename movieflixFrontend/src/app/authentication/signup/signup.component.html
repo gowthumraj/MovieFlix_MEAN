@@ -1,0 +1,103 @@
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <div class="body">
+
+ <div class="container">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+
+        <div class="card-body">
+          <h4 class="title text-center mt-4">Register into a account</h4>
+
+          <form [formGroup]="addUseForm" class="form-box px-3">
+            <div class="form-input">
+              <div class="input-field" [ngClass]="{ 'is-invalid':userId.errors && (userId.touched || userId.dirty),'is-valid' :userId.valid}"
+              [class.error]="addUseForm.controls['userId'].dirty && addUseForm.hasError('required','userId')" >
+              <span><i class="fa fa-user"></i></span>
+              <!-- <input type="text" name="" placeholder="Enter Username" tabindex="10" required> -->
+              <input class ="form-control" formControlName="userId" type="text" placeholder="User Id or User Name" tabindex="10" >
+              </div>
+              <div class="invalid-feedback">
+                <strong *ngIf="userId.errors?.['required']">User Id is required </strong>
+                <strong *ngIf="userId.errors?.['minlength']">User ID must be greater than 3
+                    character</strong>
+              </div>
+            </div>
+
+            <div class="form-input">
+                <div class="input-field">
+                    <span><i class="fa fa-user"></i></span>
+                    <input class ="form-control" formControlName="userEmail" type="email" placeholder="User Email" tabindex="10" 
+                    [ngClass]="{ 'is-invalid':userEmail.errors && (userEmail.touched || userEmail.dirty),'is-valid' :userEmail.valid}">
+                    <div class="invalid-feedback">
+                      <strong *ngIf="userEmail.errors?.['required']">User Email is required </strong>
+                      <strong *ngIf="userEmail.errors?.['pattern']">Enter a Valid Email ID </strong>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="form-input">
+                <div class="input-field">
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <input class ="form-control" formControlName="userLocation" type="text" placeholder="User Location" tabindex="10" 
+                    [ngClass]="{ 'is-invalid':userLocation.errors && (userLocation.touched || userLocation.dirty),'is-valid' :userLocation.valid}">
+                    <div class="invalid-feedback">
+                      <strong *ngIf="userLocation.errors?.['required']">Location is required </strong>
+                      <strong *ngIf="userLocation.errors?.['pattern']">Enter a Valid Location
+                      </strong>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="form-input">
+                <div class="input-field">
+                    <span><i (click)="hideShowPass()" class="fa fa-lock"></i></span>
+                    <input class ="form-control" formControlName="userPassword" type="password" placeholder="User Password" tabindex="10" 
+                    [ngClass]="{ 'is-invalid':userPassword.errors && (userPassword.touched || userPassword.dirty),'is-valid' :userPassword.valid}">
+                
+                    <div class="invalid-feedback">
+                        <strong *ngIf="userPassword.errors?.['required']">*User Passsword is required </strong>
+                        <strong *ngIf="userPassword.errors?.['pattern']">
+                          Password must contain at least 1 number, 1 uppercase, a
+                          lowercase and a special Character<br />
+                        </strong>
+                        <strong *ngIf="userPassword.errors?.['minlength']">*User Passsword must be minimum 8 characters </strong>
+                      </div>
+              </div>
+            </div>
+
+            <div class="form-input">
+                <div class="input-field">
+                    <span><i (click)="hideShowPass()" class="fa fa-lock"></i></span>
+                    <input class ="form-control" formControlName="userPassword" type="password" placeholder="Re-enter User Password" tabindex="10" 
+                    [ngClass]="{ 'is-invalid':userPassword.errors && (userPassword.touched || userPassword.dirty),'is-valid' :userPassword.valid}">
+                
+                    <div class="invalid-feedback">
+                      <strong *ngIf="userPassword.errors?.['required']">*User Passsword is required </strong>
+                      <strong *ngIf="userPassword.errors?.['pattern']">
+                        Password must contain at least 1 number, 1 uppercase, a
+                        lowercase and a special Character<br />
+                      </strong>
+                      <strong *ngIf="userPassword.errors?.['minlength']">*User Passsword must be minimum 8 characters </strong>
+                    </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <button type="submit"   [disabled]="addUseForm.invalid"   class="btn btn-block text-uppercase" (click)= "addUser()">Sign Up</button>
+            </div>
+
+            <div class="text-right">
+              <a href="#" class="forget-link">Forget Password?</a>
+            </div>
+            <hr class="my-4">
+            <div class="text-center mb-2">
+                Already have an account? 
+              <a  class="register-link" routerLink="/login"> Login here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>

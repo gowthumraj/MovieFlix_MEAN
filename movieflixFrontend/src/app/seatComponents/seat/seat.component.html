@@ -1,0 +1,5 @@
+<button class="btn btn-primary"
+    (click)="enableDisableRule()" 
+    [ngClass]="{'green' : toggle, 'red': !toggle}">
+    {{seat.seatname}}
+</button>

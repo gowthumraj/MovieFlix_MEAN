@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="body">
+ <div class="container">
+    <div class="row px-3">
+      <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0">
+        <div class="img-left d-none d-md-flex"></div>
+
+        <div class="card-body">
+          <h4 class="title text-center mt-4">
+            Login into account
+          </h4>
+          <form [formGroup]="loginForm" class="form-box px-3">
+            <div class="form-input">
+              <div class="input-field" [ngClass]="{ 'is-invalid':userName.errors && (userName.touched || userName.dirty),'is-valid' :userName.valid}"
+              [class.error]="loginForm.controls['userName'].dirty && loginForm.hasError('required','userName')" >
+              <span><i class="fa fa-user"></i></span>
+              <!-- <input type="text" name="" placeholder="Enter Username" tabindex="10" required> -->
+              <input class ="form-control" formControlName="userName" type="text" placeholder="Admin Id or User Email" tabindex="10"  >
+              </div>
+              <div class="invalid-feedback">
+                <strong *ngIf = "userName.errors?.['required']">*Admin Id is required </strong>
+              </div>
+            </div>
+
+            <div class="form-input">
+              <div class="input-field" [ngClass]="{'is-invalid':userPassword.errors && (userPassword.touched || userPassword.dirty),'is-valid' :userPassword.valid}"
+              [class.error]= "loginForm.controls['userPassword'].dirty && loginForm.hasError('required','userPassword')">
+              <!-- <input type="password" name="" placeholder="Password" required> -->
+              <input type= "password" placeholder="Admin Password" class="form-control" tabindex="10" formControlName="userPassword">
+              <span><i (click)="hideShowPass()" class="fa fa-lock"></i></span>
+             
+            </div>
+            <div class="invalid-feedback">
+              <strong *ngIf = "userPassword.errors?.['required']">*Admin Password is required </strong>
+            </div>
+            </div>
+
+            <!-- <div class="mb-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="cb1" name="">
+                <label class="custom-control-label" for="cb1">Remember me</label>
+              </div>
+            </div> -->
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-block text-uppercase" (click)="onlogin()">Login</button>
+            </div>
+
+            <div class="text-right">
+              <a href="#" class="forget-link">Forget Password?</a>
+            </div>
+            <hr class="my-4">
+            <div class="text-center mb-2">
+              Don't have an account?
+              <a  class="register-link" routerLink="/signup"> Register here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
