@@ -1,0 +1,44 @@
+//copy paste this in mongo shell to get theatre data 
+
+
+db.theatres.insertMany(
+[
+{
+    "theatreId": "101",
+    "theatreName": "Next Galleria Mall",
+    "theatreCapacity": 300,
+    "theatreType": "PVR Cinemas",
+    "showTime": ["11:00 AM","2:00 PM","6:00 PM"],
+    "audis": ["AUDI101","AUDI102"]
+},
+
+{
+    "theatreId": "102",
+    "theatreName": "Forum Mall",
+    "theatreCapacity": 300,
+    "theatreType": "Asian Cinemas",
+    "showTime": ["11:00 AM","2:00 PM","6:00 PM"],
+    "audis": ["AUDI103","AUDI104"]
+},
+
+
+{
+    "theatreId": "103",
+    "theatreName": "Inorbit Mall",
+    "theatreCapacity": 300,
+    "theatreType": "Cinepolis",
+    "showTime": ["11:00 AM","2:00 PM","6:00 PM"],
+    "audis": ["AUDI105","AUDI106"]
+},
+
+
+{
+    "theatreId": "104",
+    "theatreName": "GSM Mall",
+    "theatreCapacity": 200,
+    "theatreType": "INOX",
+    "showTime": ["11:20 AM","2:20 PM","6:45 PM"],
+    "audis": ["AUDI107","AUDI108"]
+}
+]
+)
